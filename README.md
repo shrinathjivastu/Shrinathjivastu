@@ -1,4 +1,4 @@
-## Hi there 👋
+## shri nathji vastu 👋
 
 <!--
 **shrinathjivastu/Shrinathjivastu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
