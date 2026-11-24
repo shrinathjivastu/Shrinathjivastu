@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrinathji Vastu Insight | Harmonizing Sacred Space</title>
+
+  <!-- Google Fonts: Cinzel & Cormorant Garamond for sacred heritage serif, Plus Jakarta Sans for clean body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pichwaiSage: {
+              dark: '#264923',
+              DEFAULT: '#3a6b35',
+              light: '#4e8746',
+              mist: '#edf4ec',
+            },
+            pichwaiGold: {
+              dark: '#b89436',
+              DEFAULT: '#e6c667',
+              light: '#f4dc8c',
+              pale: '#fbf1cf',
+            },
+            lotusPink: {
+              DEFAULT: '#e88ca5',
+              soft: '#fae3ea',
+              deep: '#c45b78',
+            },
+            sacredIndigo: {
+              DEFAULT: '#183a5a',
+              dark: '#0f263d',
+              pond: '#1d4c73',
+            },
+            parchment: {
+              DEFAULT: '#fbf9f3',
+              warm: '#f4efe2',
+              card: '#fffdf9',
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            cormorant: ['Cormorant Garamond', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 10px 30px -5px rgba(230, 198, 103, 0.28)',
+            'sacred-card': '0 14px 34px -10px rgba(38, 73, 35, 0.12)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Traditional Pichwai painted canvas background */
+    .pichwai-canvas-bg {
+      background-color: #3a6b35;
+      background-image:
+        radial-gradient(circle at 50% 35%, rgba(78, 135, 70, 0.72) 0%, rgba(58, 107, 53, 0.90) 58%, rgba(38, 73, 35, 0.98) 100%),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0px, rgba(255, 255, 255, 0.018) 2px, transparent 2px, transparent 6px);
+    }
+
+    /* Gold metallic serif gradient matching banner typography */
+    .gold-text-gradient {
+      background: linear-gradient(180deg, #f9e69e 0%, #e6c667 52%, #be9835 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.25));
+    }
+
+    /* Gentle floating lotus animation */
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    .lotus-float {
+      animation: gentleFloat 4.5s ease-in-out infinite;
+    }
+
+    /* Interactive Mandala Node states */
+    .mandala-node {
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .mandala-node:hover .node-circle {
+      stroke: #f4dc8c;
+      stroke-width: 3px;
+      filter: drop-shadow(0 0 8px rgba(230, 198, 103, 0.75));
+    }
+    .mandala-node.active .node-circle {
+      fill: #e6c667;
+      stroke: #fbf9f3;
+      stroke-width: 3px;
+      filter: drop-shadow(0 0 14px rgba(230, 198, 103, 0.9));
+    }
+    .mandala-node.active .node-label {
+      fill: #0f263d;
+      font-weight: 800;
+    }
+    .mandala-node.active .node-sub {
+      fill: #264923;
+      font-weight: 700;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fbf9f3;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3a6b35;
+      border-radius: 9999px;
+      border: 2px solid #fbf9f3;
+    }
+  </style>
+</head>
+<body class="bg-parchment text-stone-800 font-sans antialiased selection:bg-pichwaiGold selection:text-pichwaiSage-dark overflow-x-hidden">
+
+  <!-- ===================================================================== -->
+  <!-- 1. STICKY NAVIGATION BAR                                              -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-50 w-full bg-pichwaiSage-dark/95 backdrop-blur-md border-b border-pichwaiGold/35 shadow-md transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Brand Logo & Lotus Icon -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-pichwaiSage border border-pichwaiGold/80 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
+            <svg class="w-7 h-7" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M32 10C32 10 23 22 23 33C23 39.5 27 44 32 44C37 44 41 39.5 41 33C41 22 32 10 32 10Z" fill="#e88ca5" stroke="#e6c667" stroke-width="1.5"/>
+              <path d="M23 34C17 26 11 23 11 23C11 23 12 35 20 41C24 44 28 44 32 44" fill="#f3a9be" stroke="#e6c667" stroke-width="1.4"/>
+              <path d="M41 34C47 26 53 23 53 23C53 23 52 35 44 41C40 44 36 44 32 44" fill="#f3a9be" stroke="#e6c667" stroke-width="1.4"/>
+              <path d="M16 42C11 39 6 39 6 39C6 39 10 47 19 48C25 49 32 47 32 47C32 47 39 49 45 48C54 47 58 39 58 39C58 39 53 39 48 42" fill="#e88ca5" stroke="#e6c667" stroke-width="1.4"/>
+              <ellipse cx="32" cy="49" rx="14" ry="3.5" fill="#3a6b35" stroke="#e6c667" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-cinzel font-bold text-sm sm:text-base md:text-lg tracking-wider text-pichwaiGold leading-tight">
+              SHRINATHJI VASTU INSIGHT
+            </span>
+            <span class="font-cormorant italic text-xs sm:text-sm text-parchment/85 tracking-widest hidden sm:block">
+              Harmonizing Sacred Space
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6">
+          <a href="#philosophy" class="text-sm font-medium text-parchment/90 hover:text-pichwaiGold transition-colors tracking-wide">Philosophy</a>
+          <a href="#services" class="text-sm font-medium text-parchment/90 hover:text-pichwaiGold transition-colors tracking-wide">Services</a>
+          <a href="#compass" class="text-sm font-medium text-parchment/90 hover:text-pichwaiGold transition-colors tracking-wide">Vastu Compass</a>
+          <a href="#remedies" class="text-sm font-medium text-parchment/90 hover:text-pichwaiGold transition-colors tracking-wide">Remedies</a>
+
+          <!-- Direct Phone & WhatsApp Quick Links -->
+          <div class="flex items-center gap-2 pl-2 border-l border-pichwaiGold/30">
+            <a href="tel:+918829847589" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-pichwaiSage/80 border border-pichwaiGold/45 text-pichwaiGold-pale hover:text-pichwaiGold hover:border-pichwaiGold text-xs font-semibold transition-all" title="Call +91 88298 47589">
+              <svg class="w-3.5 h-3.5 text-pichwaiGold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              <span>+91 88298 47589</span>
+            </a>
+            <a href="mailto:kapilshrma091@gmail.com" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-pichwaiSage/80 border border-pichwaiGold/45 text-pichwaiGold-pale hover:text-pichwaiGold hover:border-pichwaiGold transition-all" title="Email kapilshrma091@gmail.com" aria-label="Email kapilshrma091@gmail.com">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+            </a>
+            <a href="https://wa.me/918829847589?text=Namaste%20Shrinathji%20Vastu%20Insight,%20I%20would%20like%20to%20inquire%20about%20a%20Vastu%20consultation." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-600/90 border border-pichwaiGold/60 text-white hover:bg-emerald-500 transition-all" title="WhatsApp +91 88298 47589" aria-label="WhatsApp +91 88298 47589">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+              </svg>
+            </a>
+          </div>
+
+          <a href="#consultation" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-pichwaiGold to-pichwaiGold-light text-pichwaiSage-dark font-semibold text-sm shadow-gold-glow hover:brightness-105 transition-all">
+            Book Consultation
+          </a>
+        </nav>
+
+        <!-- Mobile Quick Call + Menu Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="tel:+918829847589" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-pichwaiSage border border-pichwaiGold/55 text-pichwaiGold-pale text-xs font-semibold">
+            <svg class="w-3.5 h-3.5 text-pichwaiGold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+            <span class="hidden xs:inline">88298 47589</span>
+            <span class="xs:hidden">Call</span>
+          </a>
+          <button id="mobileMenuBtn" type="button" aria-label="Toggle Menu" class="p-2.5 rounded-xl border border-pichwaiGold/45 text-pichwaiGold hover:bg-pichwaiSage transition-colors">
+            <svg id="menuIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menuIconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-pichwaiSage-dark/98 border-t border-pichwaiGold/30 px-4 pt-3 pb-6 space-y-2">
+      <a href="#philosophy" class="mobile-nav-link block px-4 py-3 rounded-xl text-parchment hover:bg-pichwaiSage hover:text-pichwaiGold font-medium">Philosophy &amp; Elements</a>
+      <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-xl text-parchment hover:bg-pichwaiSage hover:text-pichwaiGold font-medium">Services</a>
+      <a href="#compass" class="mobile-nav-link block px-4 py-3 rounded-xl text-parchment hover:bg-pichwaiSage hover:text-pichwaiGold font-medium">Interactive Vastu Compass</a>
+      <a href="#remedies" class="mobile-nav-link block px-4 py-3 rounded-xl text-parchment hover:bg-pichwaiSage hover:text-pichwaiGold font-medium">Remedies</a>
+      <div class="grid grid-cols-2 gap-2.5 pt-2">
+        <a href="tel:+918829847589" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-pichwaiSage border border-pichwaiGold/60 text-pichwaiGold-pale font-semibold text-xs">
+          <span>📞 +91 88298 47589</span>
+        </a>
+        <a href="https://wa.me/918829847589?text=Namaste%20Shrinathji%20Vastu%20Insight,%20I%20would%20like%20to%20inquire%20about%20a%20Vastu%20consultation." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-700 border border-pichwaiGold/60 text-white font-semibold text-xs">
+          <span>💬 WhatsApp Now</span>
+        </a>
+      </div>
+      <div class="pt-1">
+        <a href="mailto:kapilshrma091@gmail.com" class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-pichwaiSage/60 border border-pichwaiGold/45 text-pichwaiGold-pale font-medium text-xs">
+          <span>✉️ kapilshrma091@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 2. HERO SECTION (PICHWAI BANNER INSPIRED)                             -->
+  <!-- ===================================================================== -->
+  <section id="top" class="relative pichwai-canvas-bg overflow-hidden border-b-4 border-pichwaiGold">
+    <!-- Left Motif: Kamadhenu Sacred Cow & Calf Silhouette inspired by Nathdwara Pichwai -->
+    <svg class="hidden md:block absolute left-2 lg:left-6 bottom-16 sm:bottom-20 w-52 lg:w-64 h-auto opacity-30 pointer-events-none" viewBox="0 0 260 210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Kamadhenu Mother Cow -->
+      <path d="M55 155 L52 192 M72 156 L74 192 M156 154 L158 192 M174 150 L185 186" stroke="#e6c667" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M45 112 C42 92 62 84 95 86 C125 88 152 84 172 74 C180 62 190 54 202 58 C210 61 215 70 210 78 C202 88 188 94 182 108 C178 132 166 154 135 156 C102 158 68 156 50 142 C42 135 42 122 45 112 Z" fill="#fbf9f3" fill-opacity="0.16" stroke="#e6c667" stroke-width="2"/>
+      <!-- Sacred Tilak & Floral Stamping on Cow -->
+      <circle cx="96" cy="112" r="4" fill="#e88ca5"/>
+      <circle cx="132" cy="116" r="4" fill="#e88ca5"/>
+      <circle cx="115" cy="134" r="3.5" fill="#e6c667"/>
+      <!-- Horns & Bell -->
+      <path d="M186 58 C184 44 190 36 196 34 M196 56 C198 44 204 38 210 38" stroke="#e6c667" stroke-width="2" stroke-linecap="round"/>
+      <path d="M168 82 Q176 105 186 96" stroke="#e6c667" stroke-width="1.8" fill="none"/>
+      <circle cx="180" cy="103" r="4" fill="#e6c667"/>
+      <!-- Tail -->
+      <path d="M46 105 C32 115 30 148 36 174" stroke="#e6c667" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- Little Calf beside Mother -->
+      <path d="M96 156 C96 144 110 140 128 142 C136 134 144 132 150 138 C154 143 148 152 144 160 C142 172 132 176 116 176 C102 176 96 168 96 156 Z" fill="#fbf9f3" fill-opacity="0.2" stroke="#e6c667" stroke-width="1.6"/>
+      <path d="M104 175 L103 192 M114 176 L114 192 M132 175 L133 192 M140 172 L143 192" stroke="#e6c667" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Right Motif: Pichwai Banana Trees (Kadali Vriksha) & Fruit Clusters -->
+    <svg class="hidden md:block absolute right-0 bottom-14 sm:bottom-18 w-64 lg:w-80 h-auto opacity-35 pointer-events-none" viewBox="0 0 280 340" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Trunks -->
+      <path d="M210 340 C205 240 200 160 195 75" stroke="#e6c667" stroke-width="3.5"/>
+      <path d="M145 340 C145 265 142 210 138 145" stroke="#e6c667" stroke-width="2.8"/>
+      <!-- Tall Banana Leaves -->
+      <path d="M195 75 C135 55 75 80 45 125 C105 120 155 100 195 75 Z" fill="#4e8746" stroke="#e6c667" stroke-width="1.5"/>
+      <path d="M195 75 C225 35 265 45 285 85 C245 95 218 88 195 75 Z" fill="#4e8746" stroke="#e6c667" stroke-width="1.5"/>
+      <path d="M196 105 C130 105 70 135 45 185 C105 175 155 145 196 105 Z" fill="#3a6b35" stroke="#e6c667" stroke-width="1.5"/>
+      <path d="M198 110 C240 100 275 125 290 170 C245 162 218 140 198 110 Z" fill="#4e8746" stroke="#e6c667" stroke-width="1.5"/>
+      <!-- Smaller Banana Plant Leaves -->
+      <path d="M138 145 C90 135 45 155 25 195 C72 190 110 170 138 145 Z" fill="#4e8746" stroke="#e6c667" stroke-width="1.4"/>
+      <path d="M138 145 C175 130 215 145 235 180 C192 178 162 165 138 145 Z" fill="#3a6b35" stroke="#e6c667" stroke-width="1.4"/>
+      <!-- Hanging Golden Banana Bunch -->
+      <path d="M112 162 Q104 185 108 212" stroke="#e6c667" stroke-width="2" fill="none"/>
+      <ellipse cx="104" cy="176" rx="9" ry="3.5" transform="rotate(-20 104 176)" fill="#e6c667"/>
+      <ellipse cx="102" cy="186" rx="9" ry="3.5" transform="rotate(-15 102 186)" fill="#e6c667"/>
+      <ellipse cx="103" cy="196" rx="8.5" ry="3.5" transform="rotate(-10 103 196)" fill="#e6c667"/>
+      <ellipse cx="106" cy="206" rx="8" ry="3.2" transform="rotate(-5 106 206)" fill="#e6c667"/>
+    </svg>
+
+    <!-- Subtle Golden Halo Aura -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[330px] h-[330px] sm:w-[540px] sm:h-[540px] rounded-full border border-pichwaiGold/20 bg-radial from-pichwaiGold/10 to-transparent"></div>
+    </div>
+
+    <!-- Main Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-28 sm:pb-36 text-center">
+      <!-- Top Heritage Pill -->
+      <div class="inline-flex items-center justify-center mb-5 px-4 py-1.5 rounded-full bg-pichwaiSage-dark/65 border border-pichwaiGold/50 backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-lotusPink mr-2.5"></span>
+        <span class="font-cormorant italic text-pichwaiGold-light text-sm sm:text-base tracking-widest">
+          Shree Nathji Krupa • Authentic Vedic Vastu Shastra
+        </span>
+        <span class="w-2 h-2 rounded-full bg-lotusPink ml-2.5"></span>
+      </div>
+
+      <!-- Main Banner Title -->
+      <h1 class="font-cinzel font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wider gold-text-gradient leading-tight">
+        SHRINATHJI VASTU INSIGHT
+      </h1>
+
+      <!-- Subtitle Tagline -->
+      <p class="mt-3 sm:mt-4 font-cinzel font-medium text-base sm:text-xl md:text-2xl tracking-[0.22em] text-pichwaiGold-pale uppercase">
+        HARMONIZING SACRED SPACE
+      </p>
+
+      <!-- Decorative Gold & Pink Lotus Divider -->
+      <div class="my-6 sm:my-8 flex items-center justify-center gap-3 max-w-md mx-auto">
+        <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-pichwaiGold to-pichwaiGold-light"></div>
+        <svg class="w-10 h-10 lotus-float" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 8C32 8 22 21 22 33C22 40 26.5 45 32 45C37.5 45 42 40 42 33C42 21 32 8 32 8Z" fill="#e88ca5" stroke="#f9e69e" stroke-width="1.6"/>
+          <path d="M22 34C15 25 9 22 9 22C9 22 10 35 19 42C23.5 45.5 28 45 32 45" fill="#f3a9be" stroke="#f9e69e" stroke-width="1.5"/>
+          <path d="M42 34C49 25 55 22 55 22C55 22 54 35 45 42C40.5 45.5 36 45 32 45" fill="#f3a9be" stroke="#f9e69e" stroke-width="1.5"/>
+          <ellipse cx="32" cy="49" rx="16" ry="4" fill="#264923" stroke="#f9e69e" stroke-width="1.5"/>
+        </svg>
+        <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-pichwaiGold to-pichwaiGold-light"></div>
+      </div>
+
+      <!-- Poetic Introduction to Vedic Vastu Shastra -->
+      <p class="max-w-2xl mx-auto text-parchment/95 text-base sm:text-lg leading-relaxed font-normal px-2">
+        Guided by timeless Vedic Vastu Shastra and the serene devotion of Nathdwara heritage, we align your home, workplace, and land with solar rhythms and the five sacred elements—inviting peace, clarity, and enduring prosperity without structural demolition.
+      </p>
+
+      <!-- Hero CTA Buttons -->
+      <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#compass" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pichwaiGold via-pichwaiGold-light to-pichwaiGold text-pichwaiSage-dark font-cinzel font-bold text-sm sm:text-base tracking-wider shadow-gold-glow hover:scale-[1.02] transition-all">
+          Explore Vastu Compass
+        </a>
+        <a href="#consultation" class="w-full sm:w-auto px-8 py-4 rounded-full bg-pichwaiSage-dark/70 border border-pichwaiGold/65 text-pichwaiGold-pale font-medium text-sm sm:text-base hover:bg-pichwaiSage-dark transition-all">
+          Book a Consultation
+        </a>
+      </div>
+    </div>
+
+    <!-- Sacred Lotus Pond Border at Bottom of Hero -->
+    <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg class="w-full h-16 sm:h-24" viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Deep Sacred Indigo Pond Water -->
+        <path d="M0 48 C 240 36, 480 60, 720 48 C 960 36, 1200 60, 1440 48 L 1440 110 L 0 110 Z" fill="#183a5a"/>
+        <path d="M0 64 C 320 52, 640 72, 960 60 C 1180 52, 1320 68, 1440 62 L 1440 110 L 0 110 Z" fill="#0f263d" opacity="0.78"/>
+        <!-- Golden Water Ripples -->
+        <path d="M90 78 Q 150 74 210 78 M 440 85 Q 520 81 600 85 M 860 76 Q 940 72 1020 76 M 1190 88 Q 1270 84 1350 88" stroke="#e6c667" stroke-width="1.2" opacity="0.45" fill="none"/>
+
+        <!-- Floating Lotus Pads & Pink Lotuses -->
+        <g transform="translate(120, 68)">
+          <ellipse cx="0" cy="0" rx="34" ry="8" fill="#3a6b35" stroke="#e6c667" stroke-width="1.2"/>
+          <g transform="translate(0, -24)">
+            <path d="M0 -18 C-7 -6 -7 6 0 12 C7 6 7 -6 0 -18 Z" fill="#e88ca5" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M-5 8 C-14 0 -18 -8 -18 -8 C-18 -8 -16 4 -8 10 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M5 8 C14 0 18 -8 18 -8 C18 -8 16 4 8 10 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+          </g>
+        </g>
+
+        <g transform="translate(410, 74)">
+          <ellipse cx="0" cy="0" rx="38" ry="9" fill="#4e8746" stroke="#e6c667" stroke-width="1.2"/>
+          <g transform="translate(0, -26)">
+            <path d="M0 -20 C-8 -7 -8 7 0 13 C8 7 8 -7 0 -20 Z" fill="#e88ca5" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M-6 9 C-16 0 -21 -9 -21 -9 C-21 -9 -18 5 -9 11 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M6 9 C16 0 21 -9 21 -9 C21 -9 18 5 9 11 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+          </g>
+        </g>
+
+        <g transform="translate(720, 70)">
+          <ellipse cx="0" cy="0" rx="46" ry="10" fill="#3a6b35" stroke="#f4dc8c" stroke-width="1.4"/>
+          <g transform="translate(0, -28)">
+            <path d="M0 -22 C-9 -8 -9 8 0 15 C9 8 9 -8 0 -22 Z" fill="#e88ca5" stroke="#f9e69e" stroke-width="1.2"/>
+            <path d="M-7 10 C-18 0 -24 -10 -24 -10 C-24 -10 -20 6 -10 13 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1.1"/>
+            <path d="M7 10 C18 0 24 -10 24 -10 C24 -10 20 6 10 13 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1.1"/>
+          </g>
+        </g>
+
+        <g transform="translate(1040, 74)">
+          <ellipse cx="0" cy="0" rx="38" ry="9" fill="#4e8746" stroke="#e6c667" stroke-width="1.2"/>
+          <g transform="translate(0, -26)">
+            <path d="M0 -20 C-8 -7 -8 7 0 13 C8 7 8 -7 0 -20 Z" fill="#e88ca5" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M-6 9 C-16 0 -21 -9 -21 -9 C-21 -9 -18 5 -9 11 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M6 9 C16 0 21 -9 21 -9 C21 -9 18 5 9 11 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+          </g>
+        </g>
+
+        <g transform="translate(1320, 68)">
+          <ellipse cx="0" cy="0" rx="34" ry="8" fill="#3a6b35" stroke="#e6c667" stroke-width="1.2"/>
+          <g transform="translate(0, -24)">
+            <path d="M0 -18 C-7 -6 -7 6 0 12 C7 6 7 -6 0 -18 Z" fill="#e88ca5" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M-5 8 C-14 0 -18 -8 -18 -8 C-18 -8 -16 4 -8 10 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+            <path d="M5 8 C14 0 18 -8 18 -8 C18 -8 16 4 8 10 Z" fill="#f3a9be" stroke="#f9e69e" stroke-width="1"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. CORE VASTU PHILOSOPHY & PANCHA MAHABHUTAS (FIVE ELEMENTS)          -->
+  <!-- ===================================================================== -->
+  <section id="philosophy" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <!-- Top Philosophy Intro Card -->
+    <div class="relative rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-7 sm:p-12 shadow-sacred-card mb-14 overflow-hidden">
+      <!-- Corner Gold Filigree Accents -->
+      <div class="absolute top-3 left-3 w-8 h-8 border-t-2 border-l-2 border-pichwaiGold rounded-tl-xl pointer-events-none"></div>
+      <div class="absolute top-3 right-3 w-8 h-8 border-t-2 border-r-2 border-pichwaiGold rounded-tr-xl pointer-events-none"></div>
+      <div class="absolute bottom-3 left-3 w-8 h-8 border-b-2 border-l-2 border-pichwaiGold rounded-bl-xl pointer-events-none"></div>
+      <div class="absolute bottom-3 right-3 w-8 h-8 border-b-2 border-r-2 border-pichwaiGold rounded-br-xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 text-pichwaiSage font-semibold text-xs sm:text-sm uppercase tracking-[0.2em]">
+            <span class="w-6 h-[1.5px] bg-pichwaiGold"></span>
+            Core Vastu Philosophy
+          </div>
+          <h2 class="font-cinzel font-bold text-2xl sm:text-3xl lg:text-4xl text-pichwaiSage-dark leading-snug">
+            Sacred Architecture Rooted in Devotion &amp; Natural Balance
+          </h2>
+          <p class="text-stone-700 text-base sm:text-lg leading-relaxed">
+            In traditional Nathdwara havelis and Vedic architecture, a building is honored as a living organism—the <em>Vastu Purusha</em>—breathing through its central courtyard (<em>Brahmasthan</em>) and welcoming the morning sun from the East.
+          </p>
+          <p class="text-stone-600 text-base leading-relaxed">
+            At <strong class="text-pichwaiSage-dark font-semibold">Shrinathji Vastu Insight</strong>, we harmonize modern apartments, villas, offices, and industrial plots by balancing the five primordial elements (<em>Pancha Mahabhutas</em>) through thoughtful spatial flow, light, colors, and non-destructive remedies.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-3xl pichwai-canvas-bg p-7 sm:p-8 text-center border-2 border-pichwaiGold shadow-gold-glow">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pichwaiSage-dark/80 border border-pichwaiGold flex items-center justify-center">
+              <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none">
+                <rect x="14" y="14" width="36" height="36" stroke="#e6c667" stroke-width="1.5"/>
+                <rect x="14" y="14" width="36" height="36" transform="rotate(45 32 32)" stroke="#e6c667" stroke-width="1.5"/>
+                <circle cx="32" cy="32" r="9" fill="#e88ca5"/>
+              </svg>
+            </div>
+            <blockquote class="font-cormorant italic text-xl sm:text-2xl text-pichwaiGold-pale leading-relaxed">
+              “When Earth, Water, Fire, Air, and Space dwell in harmony within your walls, peace and abundance blossom effortlessly.”
+            </blockquote>
+            <p class="mt-3 font-cinzel text-xs tracking-widest text-pichwaiGold uppercase">
+              Vedic Sthapatya Veda Principle
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Five Elements (Pancha Mahabhutas) Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="font-cormorant italic text-lg sm:text-xl text-pichwaiSage font-semibold">Pancha Mahabhutas</span>
+      <h3 class="mt-1 font-cinzel font-bold text-2xl sm:text-3xl text-pichwaiSage-dark">
+        The Five Sacred Elements &amp; Directional Wisdom
+      </h3>
+      <p class="mt-2 text-stone-600 text-sm sm:text-base">
+        Every direction in your property resonates with a primary element and color spectrum.
+      </p>
+    </div>
+
+    <!-- 5-Card Pancha Mahabhutas Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <!-- 1. Earth (Prithvi) -->
+      <div class="rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-6 shadow-sacred-card hover:-translate-y-1 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-800 border border-amber-300 flex items-center justify-center font-cinzel font-bold text-lg">
+              पृ
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200">
+              South-West
+            </span>
+          </div>
+          <h4 class="font-cinzel font-bold text-lg text-pichwaiSage-dark">Earth (Prithvi)</h4>
+          <p class="text-xs font-semibold text-pichwaiGold-dark mt-0.5 mb-3">Stability • Ancestral Strength • Support</p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Governs grounding, family security, and lasting relationships. Anchored in the heavy South-West zone (<em>Nairutya</em>).
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-pichwaiGold/25 flex items-center gap-2 text-xs text-stone-700">
+          <span class="w-3.5 h-3.5 rounded-full bg-[#c99e48] border border-stone-300"></span>
+          <span>Ochre, Beige &amp; Earthy Gold</span>
+        </div>
+      </div>
+
+      <!-- 2. Water (Jal) -->
+      <div class="rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-6 shadow-sacred-card hover:-translate-y-1 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-11 h-11 rounded-2xl bg-sky-100 text-sacredIndigo border border-sky-300 flex items-center justify-center font-cinzel font-bold text-lg">
+              ज
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-sky-50 text-sacredIndigo border border-sky-200">
+              North-East
+            </span>
+          </div>
+          <h4 class="font-cinzel font-bold text-lg text-pichwaiSage-dark">Water (Jal)</h4>
+          <p class="text-xs font-semibold text-sacredIndigo mt-0.5 mb-3">Clarity • Intuition • Prosperity Flow</p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Nurtures wisdom, spiritual grace, and financial liquidity across the sacred North-East (<em>Ishanya</em>) and North zones.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-pichwaiGold/25 flex items-center gap-2 text-xs text-stone-700">
+          <span class="w-3.5 h-3.5 rounded-full bg-[#183a5a] border border-stone-300"></span>
+          <span>Sacred Indigo, Aqua &amp; Ivory</span>
+        </div>
+      </div>
+
+      <!-- 3. Fire (Agni) -->
+      <div class="rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-6 shadow-sacred-card hover:-translate-y-1 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-11 h-11 rounded-2xl bg-rose-100 text-lotusPink-deep border border-rose-300 flex items-center justify-center font-cinzel font-bold text-lg">
+              अ
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-rose-50 text-lotusPink-deep border border-rose-200">
+              South-East
+            </span>
+          </div>
+          <h4 class="font-cinzel font-bold text-lg text-pichwaiSage-dark">Fire (Agni)</h4>
+          <p class="text-xs font-semibold text-lotusPink-deep mt-0.5 mb-3">Vitality • Transformation • Fame</p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Fuels digestion, passion, and decisive action. Harmoniously housed in the South-East (<em>Agneya</em>) kitchen or hearth.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-pichwaiGold/25 flex items-center gap-2 text-xs text-stone-700">
+          <span class="w-3.5 h-3.5 rounded-full bg-[#e88ca5] border border-stone-300"></span>
+          <span>Lotus Pink, Coral &amp; Warm Terracotta</span>
+        </div>
+      </div>
+
+      <!-- 4. Air (Vayu) -->
+      <div class="rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-6 shadow-sacred-card hover:-translate-y-1 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-11 h-11 rounded-2xl bg-emerald-100 text-pichwaiSage-dark border border-emerald-300 flex items-center justify-center font-cinzel font-bold text-lg">
+              वा
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-50 text-pichwaiSage-dark border border-emerald-200">
+              North-West
+            </span>
+          </div>
+          <h4 class="font-cinzel font-bold text-lg text-pichwaiSage-dark">Air (Vayu)</h4>
+          <p class="text-xs font-semibold text-pichwaiSage mt-0.5 mb-3">Movement • Harmony • Social Grace</p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Brings fresh prana, supportive relationships, and smooth communication through the East and North-West (<em>Vayavya</em>).
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-pichwaiGold/25 flex items-center gap-2 text-xs text-stone-700">
+          <span class="w-3.5 h-3.5 rounded-full bg-[#4e8746] border border-stone-300"></span>
+          <span>Pichwai Sage Green &amp; Mint</span>
+        </div>
+      </div>
+
+      <!-- 5. Space (Akasha) -->
+      <div class="rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-6 shadow-sacred-card hover:-translate-y-1 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-11 h-11 rounded-2xl bg-yellow-100 text-yellow-800 border border-yellow-300 flex items-center justify-center font-cinzel font-bold text-lg">
+              आ
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-yellow-50 text-yellow-900 border border-yellow-200">
+              Center
+            </span>
+          </div>
+          <h4 class="font-cinzel font-bold text-lg text-pichwaiSage-dark">Space (Akasha)</h4>
+          <p class="text-xs font-semibold text-pichwaiGold-dark mt-0.5 mb-3">Expansion • Stillness • Higher Grace</p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            The sacred <em>Brahmasthan</em> at the heart of every structure—kept open, bright, and clutter-free to radiate cosmic peace.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-pichwaiGold/25 flex items-center gap-2 text-xs text-stone-700">
+          <span class="w-3.5 h-3.5 rounded-full bg-[#f4dc8c] border border-stone-300"></span>
+          <span>Pure Ivory, Soft Gold &amp; Daylight</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. CONSULTATION SERVICES SECTION                                      -->
+  <!-- ===================================================================== -->
+  <section id="services" class="py-16 sm:py-24 bg-parchment-warm/85 border-y border-pichwaiGold/35">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="font-cormorant italic text-lg sm:text-xl text-pichwaiSage font-semibold">Sacred Architectural Guidance</span>
+        <h2 class="mt-1 font-cinzel font-bold text-3xl sm:text-4xl text-pichwaiSage-dark">
+          Vastu Consultation Services
+        </h2>
+        <div class="mt-3 flex items-center justify-center gap-2">
+          <span class="w-12 h-[1.5px] bg-pichwaiGold"></span>
+          <span class="w-2.5 h-2.5 rotate-45 bg-lotusPink border border-pichwaiGold"></span>
+          <span class="w-12 h-[1.5px] bg-pichwaiGold"></span>
+        </div>
+        <p class="mt-4 text-stone-600 text-base">
+          Personalized consultations available both On-Site and Online worldwide via scaled floor-plan mapping.
+        </p>
+      </div>
+
+      <!-- 4 Service Cards with Non-Monetary Scope Tags & Inquire Triggers -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+        <!-- Service 1: Residential Vastu -->
+        <div class="group rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-7 shadow-sacred-card hover:-translate-y-1.5 hover:border-pichwaiGold transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-13 h-13 p-3 rounded-2xl bg-pichwaiSage text-pichwaiGold border border-pichwaiGold/50">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5L12 3l9 7.5M5 9.5V19a1 1 0 001 1h12a1 1 0 001-1V9.5M9 20v-6a1 1 0 011-1h4a1 1 0 011 1v6" />
+                </svg>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-pichwaiSage-mist text-pichwaiSage-dark border border-pichwaiSage/20">
+                Tailored Audit
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-xl text-pichwaiSage-dark mb-2">
+              Residential Vastu
+            </h3>
+            <p class="text-xs font-semibold text-pichwaiGold-dark uppercase tracking-wider mb-3">
+              Flats • Villas • Independent Homes
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+              16-Zone energy grid analysis of your home—aligning the Main Entrance, Puja Mandir, Kitchen, Bedrooms, and Brahmasthan.
+            </p>
+            <ul class="space-y-2 text-xs text-stone-700 mb-6">
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Scaled Floor-Plan Directional Audit</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Room-by-Room Elemental Report</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> 1-on-1 Live Video / On-Site Walkthrough</li>
+            </ul>
+          </div>
+          <button type="button" data-service="Residential Vastu" class="inquire-service-btn w-full py-3 rounded-full bg-pichwaiSage text-pichwaiGold-light font-cinzel font-bold text-xs tracking-wider hover:bg-pichwaiSage-dark transition-colors">
+            Inquire Now →
+          </button>
+        </div>
+
+        <!-- Service 2: Commercial & Office Vastu -->
+        <div class="group rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-7 shadow-sacred-card hover:-translate-y-1.5 hover:border-pichwaiGold transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-13 h-13 p-3 rounded-2xl bg-sacredIndigo text-pichwaiGold border border-pichwaiGold/50">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                </svg>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-sky-50 text-sacredIndigo border border-sacredIndigo/20">
+                By Appointment
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-xl text-pichwaiSage-dark mb-2">
+              Commercial &amp; Office Vastu
+            </h3>
+            <p class="text-xs font-semibold text-pichwaiGold-dark uppercase tracking-wider mb-3">
+              Offices • Showrooms • Clinics
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+              Strategic spatial alignment for leadership cabins, accounts &amp; treasury zones, client reception, and team productivity.
+            </p>
+            <ul class="space-y-2 text-xs text-stone-700 mb-6">
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Leadership &amp; Cash-Flow Zone Mapping</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Staff Seating &amp; Client Reception Flow</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Brand Logo &amp; Entrance Harmonization</li>
+            </ul>
+          </div>
+          <button type="button" data-service="Commercial & Office Vastu" class="inquire-service-btn w-full py-3 rounded-full bg-pichwaiSage text-pichwaiGold-light font-cinzel font-bold text-xs tracking-wider hover:bg-pichwaiSage-dark transition-colors">
+            Inquire Now →
+          </button>
+        </div>
+
+        <!-- Service 3: Industrial & Plot Selection -->
+        <div class="group rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-7 shadow-sacred-card hover:-translate-y-1.5 hover:border-pichwaiGold transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-13 h-13 p-3 rounded-2xl bg-pichwaiSage-dark text-pichwaiGold border border-pichwaiGold/50">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3M3 12h3m12 0h3m-5.636-3.364l-2.121 4.243-4.243 2.121 2.121-4.243 4.243-2.121z" />
+                </svg>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200">
+                Site &amp; Plan Review
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-xl text-pichwaiSage-dark mb-2">
+              Industrial &amp; Plot Selection
+            </h3>
+            <p class="text-xs font-semibold text-pichwaiGold-dark uppercase tracking-wider mb-3">
+              Land • Factories • Bhoomi Pujan
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+              Pre-purchase plot evaluation, slope &amp; road-hit (<em>Veedhi Shoola</em>) check, machinery placement, and Bhoomi Pujan guidance.
+            </p>
+            <ul class="space-y-2 text-xs text-stone-700 mb-6">
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Plot Shape, Slope &amp; Magnetic Axis Check</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Heavy Machinery &amp; Raw Material Zoning</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Auspicious Bhoomi Pujan Orientation</li>
+            </ul>
+          </div>
+          <button type="button" data-service="Industrial & Plot Selection" class="inquire-service-btn w-full py-3 rounded-full bg-pichwaiSage text-pichwaiGold-light font-cinzel font-bold text-xs tracking-wider hover:bg-pichwaiSage-dark transition-colors">
+            Inquire Now →
+          </button>
+        </div>
+
+        <!-- Service 4: Non-Demolition Vastu Remedies -->
+        <div class="group rounded-3xl bg-parchment-card border border-pichwaiGold/50 p-7 shadow-sacred-card hover:-translate-y-1.5 hover:border-pichwaiGold transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-13 h-13 p-3 rounded-2xl bg-lotusPink-deep text-parchment border border-pichwaiGold/50">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                </svg>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-lotusPink-soft text-lotusPink-deep border border-lotusPink/40">
+                Zero-Breakage Guide
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-xl text-pichwaiSage-dark mb-2">
+              Non-Demolition Vastu Remedies
+            </h3>
+            <p class="text-xs font-semibold text-pichwaiGold-dark uppercase tracking-wider mb-3">
+              Rented &amp; Ready-to-Move Spaces
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+              Gentle, zero-breakage corrections for existing homes and apartments using elemental colors, sacred metals, mirrors, and lighting.
+            </p>
+            <ul class="space-y-2 text-xs text-stone-700 mb-6">
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Entrance &amp; Toilet Dosh Neutralization</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Elemental Color &amp; Metal Strip Balancing</li>
+              <li class="flex items-center gap-2"><span class="text-pichwaiSage font-bold">✦</span> Sacred Pichwai &amp; Yantra Placement Guide</li>
+            </ul>
+          </div>
+          <button type="button" data-service="Non-Demolition Vastu Remedies" class="inquire-service-btn w-full py-3 rounded-full bg-pichwaiSage text-pichwaiGold-light font-cinzel font-bold text-xs tracking-wider hover:bg-pichwaiSage-dark transition-colors">
+            Inquire Now →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. INTERACTIVE VASTU DIRECTION & ZONE EXPLORER (MANDALA COMPASS)      -->
+  <!-- ===================================================================== -->
+  <section id="compass" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="font-cormorant italic text-lg sm:text-xl text-pichwaiSage font-semibold">Interactive Vastu Purusha Mandala</span>
+      <h2 class="mt-1 font-cinzel font-bold text-3xl sm:text-4xl text-pichwaiSage-dark">
+        8-Direction Vastu Zone Explorer
+      </h2>
+      <p class="mt-3 text-stone-600 text-base">
+        Click any of the 8 sacred directions on the lotus mandala compass—or use the quick selector pills—to reveal its ruling deity, element, ideal room placement, and balancing remedies.
+      </p>
+    </div>
+
+    <!-- Quick Mobile/Desktop Direction Pill Bar -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-10" id="directionPillBar">
+      <button type="button" data-dir="N" class="dir-pill px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold/60 bg-parchment-card text-pichwaiSage-dark hover:bg-pichwaiGold/20 transition-all">North</button>
+      <button type="button" data-dir="NE" class="dir-pill active px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold bg-pichwaiSage text-pichwaiGold-light shadow-sm transition-all">North-East</button>
+      <button type="button" data-dir="E" class="dir-pill px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold/60 bg-parchment-card text-pichwaiSage-dark hover:bg-pichwaiGold/20 transition-all">East</button>
+      <button type="button" data-dir="SE" class="dir-pill px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold/60 bg-parchment-card text-pichwaiSage-dark hover:bg-pichwaiGold/20 transition-all">South-East</button>
+      <button type="button" data-dir="S" class="dir-pill px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold/60 bg-parchment-card text-pichwaiSage-dark hover:bg-pichwaiGold/20 transition-all">South</button>
+      <button type="button" data-dir="SW" class="dir-pill px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold/60 bg-parchment-card text-pichwaiSage-dark hover:bg-pichwaiGold/20 transition-all">South-West</button>
+      <button type="button" data-dir="W" class="dir-pill px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold/60 bg-parchment-card text-pichwaiSage-dark hover:bg-pichwaiGold/20 transition-all">West</button>
+      <button type="button" data-dir="NW" class="dir-pill px-4 py-2 rounded-full text-xs sm:text-sm font-cinzel font-bold border border-pichwaiGold/60 bg-parchment-card text-pichwaiSage-dark hover:bg-pichwaiGold/20 transition-all">North-West</button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <!-- Left: Interactive SVG Mandala Wheel -->
+      <div class="lg:col-span-6 flex flex-col items-center">
+        <div class="relative w-full max-w-[440px] aspect-square rounded-full p-3 sm:p-4 pichwai-canvas-bg border-2 border-pichwaiGold shadow-gold-glow flex items-center justify-center">
+          <svg id="vastuMandalaSvg" class="w-full h-full select-none" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive 8-Direction Vastu Mandala Compass">
+            <!-- Outer Decorative Golden Rings -->
+            <circle cx="210" cy="210" r="198" fill="none" stroke="#e6c667" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <circle cx="210" cy="210" r="186" fill="none" stroke="#e6c667" stroke-width="1"/>
+            <circle cx="210" cy="210" r="115" fill="none" stroke="#e6c667" stroke-width="1" opacity="0.55"/>
+
+            <!-- Directional Radial Spokes -->
+            <g stroke="#e6c667" stroke-width="1" opacity="0.45">
+              <line x1="210" y1="24" x2="210" y2="396" />
+              <line x1="24" y1="210" x2="396" y2="210" />
+              <line x1="78" y1="78" x2="342" y2="342" />
+              <line x1="342" y1="78" x2="78" y2="342" />
+            </g>
+
+            <!-- Center Brahmasthan Lotus Core -->
+            <g transform="translate(210, 210)">
+              <circle r="54" fill="#183a5a" stroke="#e6c667" stroke-width="2"/>
+              <circle r="44" fill="none" stroke="#e88ca5" stroke-width="1" stroke-dasharray="3 3"/>
+              <!-- 8-Petal Lotus inside Brahmasthan -->
+              <path d="M0 -26 C-6 -12 -6 0 0 6 C6 0 6 -12 0 -26 Z" fill="#e88ca5"/>
+              <path d="M0 26 C-6 12 -6 0 0 -6 C6 0 6 12 0 26 Z" fill="#e88ca5"/>
+              <path d="M-26 0 C-12 -6 0 -6 6 0 C0 6 -12 6 -26 0 Z" fill="#e88ca5"/>
+              <path d="M26 0 C12 -6 0 -6 -6 0 C0 6 12 6 26 0 Z" fill="#e88ca5"/>
+              <circle r="8" fill="#e6c667"/>
+              <text y="38" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="8.2" font-weight="700" letter-spacing="1">BRAHMASTHAN</text>
+            </g>
+
+            <!-- 1. NORTH (Top: 210, 56) -->
+            <g class="mandala-node" data-dir="N" transform="translate(210, 56)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">N</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Kubera</text>
+            </g>
+
+            <!-- 2. NORTH-EAST / ISHANYA (Top-Right: 319, 101) -->
+            <g class="mandala-node active" data-dir="NE" transform="translate(319, 101)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">NE</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Ishanya</text>
+            </g>
+
+            <!-- 3. EAST (Right: 364, 210) -->
+            <g class="mandala-node" data-dir="E" transform="translate(364, 210)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">E</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Indra</text>
+            </g>
+
+            <!-- 4. SOUTH-EAST / AGNEYA (Bottom-Right: 319, 319) -->
+            <g class="mandala-node" data-dir="SE" transform="translate(319, 319)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">SE</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Agneya</text>
+            </g>
+
+            <!-- 5. SOUTH (Bottom: 210, 364) -->
+            <g class="mandala-node" data-dir="S" transform="translate(210, 364)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">S</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Yama</text>
+            </g>
+
+            <!-- 6. SOUTH-WEST / NAIRUTYA (Bottom-Left: 101, 319) -->
+            <g class="mandala-node" data-dir="SW" transform="translate(101, 319)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">SW</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Nairutya</text>
+            </g>
+
+            <!-- 7. WEST (Left: 56, 210) -->
+            <g class="mandala-node" data-dir="W" transform="translate(56, 210)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">W</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Varuna</text>
+            </g>
+
+            <!-- 8. NORTH-WEST / VAYAVYA (Top-Left: 101, 101) -->
+            <g class="mandala-node" data-dir="NW" transform="translate(101, 101)">
+              <circle class="node-circle" r="34" fill="#264923" stroke="#e6c667" stroke-width="1.8"/>
+              <text class="node-label" y="-3" text-anchor="middle" fill="#f9e69e" font-family="Cinzel, serif" font-size="12" font-weight="700">NW</text>
+              <text class="node-sub" y="11" text-anchor="middle" fill="#fbf9f3" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5">Vayavya</text>
+            </g>
+          </svg>
+        </div>
+        <p class="mt-3 text-xs text-stone-500 italic text-center">
+          Tip: Stand at the center of your home facing North to map these 8 sacred zones.
+        </p>
+      </div>
+
+      <!-- Right: Dynamic Directional Wisdom Panel -->
+      <div class="lg:col-span-6">
+        <div id="directionDetailCard" class="rounded-3xl bg-parchment-card border-2 border-pichwaiGold/70 p-7 sm:p-9 shadow-sacred-card transition-all">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-pichwaiGold/35">
+            <div>
+              <span id="dirSanskritTag" class="inline-block px-3 py-1 rounded-full bg-pichwaiSage-mist text-pichwaiSage-dark font-semibold text-xs tracking-wider uppercase mb-2">
+                Ishanya Kona • Sacred Sanctum
+              </span>
+              <h3 id="dirTitle" class="font-cinzel font-bold text-2xl sm:text-3xl text-pichwaiSage-dark">
+                North-East (Ishanya)
+              </h3>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-stone-500 uppercase tracking-wider">Pancha Bhoota</div>
+              <div id="dirElement" class="font-cinzel font-bold text-base sm:text-lg text-sacredIndigo">
+                Water (Jal) &amp; Space
+              </div>
+            </div>
+          </div>
+
+          <!-- Deity & Harmonious Colors Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-5">
+            <div class="p-4 rounded-2xl bg-parchment border border-pichwaiGold/35">
+              <div class="text-xs uppercase tracking-wider text-stone-500 font-semibold">Ruling Deity (Dikpala)</div>
+              <div id="dirDeity" class="font-cinzel font-bold text-pichwaiSage-dark text-base mt-1">
+                Lord Ishana (Shiva) &amp; Brihaspati
+              </div>
+            </div>
+            <div class="p-4 rounded-2xl bg-parchment border border-pichwaiGold/35">
+              <div class="text-xs uppercase tracking-wider text-stone-500 font-semibold">Harmonious Colors</div>
+              <div id="dirColors" class="font-semibold text-pichwaiSage-dark text-sm mt-1">
+                Soft Ivory, Pale Gold, Light Aqua
+              </div>
+            </div>
+          </div>
+
+          <!-- Ideal Room Placement -->
+          <div class="mb-5">
+            <h4 class="font-cinzel font-bold text-sm uppercase tracking-wider text-pichwaiSage-dark mb-1.5">
+              Ideal Room &amp; Functional Placement
+            </h4>
+            <p id="dirIdealRooms" class="text-stone-700 text-sm sm:text-base leading-relaxed">
+              Shrinathji Haveli / Puja Mandir, meditation corner, study room, living area, or underground clean water reservoir.
+            </p>
+          </div>
+
+          <!-- Non-Demolition Balancing Remedies -->
+          <div class="p-5 rounded-2xl bg-pichwaiSage-mist/85 border border-pichwaiSage/25">
+            <div class="flex items-center gap-2 font-cinzel font-bold text-sm text-pichwaiSage-dark mb-1.5">
+              <span class="text-lotusPink-deep text-base">❀</span>
+              <span>Non-Demolition Balancing Remedies</span>
+            </div>
+            <p id="dirRemedy" class="text-stone-700 text-sm leading-relaxed">
+              Keep this corner spotless, airy, and elevated with natural morning light. Place a copper or brass vessel with fresh water and floating lotus petals; avoid heavy storage, clutter, or fiery red hues here.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5B. SACRED PICHWAI & VASTU REMEDIES SHOWCASE (REMEDIES ANCHOR)        -->
+  <!-- ===================================================================== -->
+  <section id="remedies" class="py-14 sm:py-20 bg-pichwaiSage-dark text-parchment border-y-2 border-pichwaiGold">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="font-cormorant italic text-lg sm:text-xl text-pichwaiGold-light">Gentle Elemental Corrections</span>
+        <h2 class="mt-1 font-cinzel font-bold text-2xl sm:text-4xl text-pichwaiGold">
+          Sacred Pichwai &amp; Vedic Vastu Remedies
+        </h2>
+        <p class="mt-3 text-parchment/85 text-sm sm:text-base">
+          Authentic, aesthetic harmonizers inspired by Nathdwara traditions—bringing peace to apartments and offices without breaking a single wall.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-3xl bg-pichwaiSage/60 border border-pichwaiGold/45 p-6 backdrop-blur-sm">
+          <div class="text-pichwaiGold font-cinzel font-bold text-lg mb-2">01. Sacred Art &amp; Lotus Motifs</div>
+          <p class="text-parchment/90 text-sm leading-relaxed">
+            Placing serene Pichwai lotus ponds in the North or North-East amplifies the Water element, calming mental restlessness and inviting gentle financial flow.
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-pichwaiSage/60 border border-pichwaiGold/45 p-6 backdrop-blur-sm">
+          <div class="text-pichwaiGold font-cinzel font-bold text-lg mb-2">02. Kamadhenu &amp; Earth Anchors</div>
+          <p class="text-parchment/90 text-sm leading-relaxed">
+            Honoring Kamadhenu symbolism and earthy ochre tones in the South-West stabilizes family bonds, career grounding, and ancestral blessings.
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-pichwaiSage/60 border border-pichwaiGold/45 p-6 backdrop-blur-sm">
+          <div class="text-pichwaiGold font-cinzel font-bold text-lg mb-2">03. Pancha-Dhatu &amp; Copper Strips</div>
+          <p class="text-parchment/90 text-sm leading-relaxed">
+            Concealed copper, brass, and stainless-steel elemental strips seal directional leaks around entrances or restrooms without structural modification.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. INTERACTIVE CONSULTATION BOOKING FORM                              -->
+  <!-- ===================================================================== -->
+  <section id="consultation" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <div class="rounded-3xl bg-parchment-card border-2 border-pichwaiGold/60 p-7 sm:p-12 shadow-sacred-card relative overflow-hidden">
+      <!-- Header -->
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="font-cormorant italic text-lg sm:text-xl text-pichwaiSage font-semibold">Begin Your Sacred Alignment</span>
+        <h2 class="mt-1 font-cinzel font-bold text-2xl sm:text-4xl text-pichwaiSage-dark">
+          Book Your Vastu Consultation
+        </h2>
+        <p class="mt-2 text-stone-600 text-sm sm:text-base">
+          Share your space details below or connect directly with our Mukundgarh Mandi office via Call, WhatsApp, or Email.
+        </p>
+
+        <!-- Direct Call, WhatsApp & Email Consultation Bar -->
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 p-4 rounded-2xl bg-pichwaiSage-mist/80 border border-pichwaiGold/55">
+          <a href="tel:+918829847589" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-full bg-pichwaiSage-dark text-pichwaiGold-light font-cinzel font-bold text-xs sm:text-sm tracking-wider border border-pichwaiGold/70 hover:brightness-110 transition-all">
+            <svg class="w-4 h-4 text-pichwaiGold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+            <span>Call: +91 88298 47589</span>
+          </a>
+          <a href="https://wa.me/918829847589?text=Namaste%20Shrinathji%20Vastu%20Insight,%20I%20would%20like%20to%20book%20a%20Vastu%20consultation." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-full bg-emerald-700 text-white font-semibold text-xs sm:text-sm border border-pichwaiGold/60 hover:bg-emerald-600 transition-all">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+            <span>WhatsApp Floor Plan</span>
+          </a>
+          <a href="mailto:kapilshrma091@gmail.com?subject=Vastu%20Consultation%20Inquiry%20-%20Shrinathji%20Vastu%20Insight" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-parchment-card text-pichwaiSage-dark font-semibold text-xs sm:text-sm border border-pichwaiGold hover:bg-pichwaiGold/20 transition-all">
+            <svg class="w-4 h-4 text-pichwaiSage" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+            <span>kapilshrma091@gmail.com</span>
+          </a>
+          <a href="https://maps.google.com/?q=Mukundgarh+Mandi,+Jhunjhunu,+Rajasthan+333705" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 pt-2 mt-1 border-t border-pichwaiGold/35 text-xs sm:text-sm font-medium text-pichwaiSage-dark hover:text-pichwaiSage transition-colors">
+            <svg class="w-4 h-4 text-lotusPink-deep shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+            <span><strong>Office Address:</strong> Mukundgarh Mandi, Jhunjhunu, Rajasthan – 333705</span>
+          </a>
+        </div>
+      </div>
+
+      <form id="consultationForm" class="space-y-6" novalidate>
+        <!-- Row 1: Full Name & Phone/WhatsApp -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="clientName" class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+              Full Name <span class="text-lotusPink-deep">*</span>
+            </label>
+            <input type="text" id="clientName" name="clientName" required placeholder="e.g., Aarav Sharma"
+              class="w-full px-4 py-3.5 rounded-2xl bg-parchment border border-pichwaiGold/60 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pichwaiSage focus:border-pichwaiSage transition-all" />
+          </div>
+          <div>
+            <label for="clientPhone" class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+              Phone / WhatsApp Number <span class="text-lotusPink-deep">*</span>
+            </label>
+            <input type="tel" id="clientPhone" name="clientPhone" required placeholder="e.g., +91 88298 47589"
+              class="w-full px-4 py-3.5 rounded-2xl bg-parchment border border-pichwaiGold/60 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pichwaiSage focus:border-pichwaiSage transition-all" />
+          </div>
+        </div>
+
+        <!-- Row 2: Email & City/Location -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="clientEmail" class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+              Email Address <span class="text-lotusPink-deep">*</span>
+            </label>
+            <input type="email" id="clientEmail" name="clientEmail" required placeholder="you@example.com"
+              class="w-full px-4 py-3.5 rounded-2xl bg-parchment border border-pichwaiGold/60 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pichwaiSage focus:border-pichwaiSage transition-all" />
+          </div>
+          <div>
+            <label for="clientCity" class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+              City &amp; Consultation Mode
+            </label>
+            <select id="clientCity" name="clientCity"
+              class="w-full px-4 py-3.5 rounded-2xl bg-parchment border border-pichwaiGold/60 text-stone-800 focus:outline-none focus:ring-2 focus:ring-pichwaiSage focus:border-pichwaiSage transition-all">
+              <option value="Online Video + Floor Plan Audit (Worldwide)">Online Video + Floor Plan Audit (Worldwide)</option>
+              <option value="Office / On-Site Visit (Mukundgarh Mandi / Jhunjhunu / Shekhawati)">Office / On-Site Visit (Mukundgarh Mandi / Jhunjhunu / Shekhawati)</option>
+              <option value="On-Site Visit (Jaipur / Nathdwara / All Rajasthan)">On-Site Visit (Jaipur / Nathdwara / All Rajasthan)</option>
+              <option value="On-Site Visit (Delhi NCR / Mumbai / Ahmedabad)">On-Site Visit (Delhi NCR / Mumbai / Ahmedabad)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 3: Property Type Selector Pills -->
+        <div>
+          <span class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2.5">
+            Select Property / Service Type <span class="text-lotusPink-deep">*</span>
+          </span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="propertyTypeGroup">
+            <label class="cursor-pointer">
+              <input type="radio" name="propertyType" value="Residential Vastu" class="peer sr-only" checked />
+              <div class="p-3.5 rounded-2xl border border-pichwaiGold/60 bg-parchment text-center text-xs sm:text-sm font-semibold text-pichwaiSage-dark peer-checked:bg-pichwaiSage peer-checked:text-pichwaiGold-light peer-checked:border-pichwaiSage transition-all">
+                Residential Home
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="propertyType" value="Commercial & Office Vastu" class="peer sr-only" />
+              <div class="p-3.5 rounded-2xl border border-pichwaiGold/60 bg-parchment text-center text-xs sm:text-sm font-semibold text-pichwaiSage-dark peer-checked:bg-pichwaiSage peer-checked:text-pichwaiGold-light peer-checked:border-pichwaiSage transition-all">
+                Commercial / Office
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="propertyType" value="Industrial & Plot Selection" class="peer sr-only" />
+              <div class="p-3.5 rounded-2xl border border-pichwaiGold/60 bg-parchment text-center text-xs sm:text-sm font-semibold text-pichwaiSage-dark peer-checked:bg-pichwaiSage peer-checked:text-pichwaiGold-light peer-checked:border-pichwaiSage transition-all">
+                Plot / Industrial
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="propertyType" value="Non-Demolition Vastu Remedies" class="peer sr-only" />
+              <div class="p-3.5 rounded-2xl border border-pichwaiGold/60 bg-parchment text-center text-xs sm:text-sm font-semibold text-pichwaiSage-dark peer-checked:bg-pichwaiSage peer-checked:text-pichwaiGold-light peer-checked:border-pichwaiSage transition-all">
+                Non-Demolition
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Row 4: Preferred Date & Time Slot -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="preferredDate" class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+              Preferred Date <span class="text-lotusPink-deep">*</span>
+            </label>
+            <input type="date" id="preferredDate" name="preferredDate" required
+              class="w-full px-4 py-3.5 rounded-2xl bg-parchment border border-pichwaiGold/60 text-stone-800 focus:outline-none focus:ring-2 focus:ring-pichwaiSage focus:border-pichwaiSage transition-all" />
+          </div>
+          <div>
+            <label for="preferredTime" class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+              Preferred Time Window
+            </label>
+            <select id="preferredTime" name="preferredTime"
+              class="w-full px-4 py-3.5 rounded-2xl bg-parchment border border-pichwaiGold/60 text-stone-800 focus:outline-none focus:ring-2 focus:ring-pichwaiSage focus:border-pichwaiSage transition-all">
+              <option value="Morning (9:30 AM – 12:30 PM IST)">Morning (9:30 AM – 12:30 PM IST)</option>
+              <option value="Afternoon (2:00 PM – 5:00 PM IST)">Afternoon (2:00 PM – 5:00 PM IST)</option>
+              <option value="Evening (6:00 PM – 8:30 PM IST)">Evening (6:00 PM – 8:30 PM IST)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 5: Floor Plan Upload & Live Preview -->
+        <div>
+          <label class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+            Upload Floor Plan / Layout Sketch (Optional)
+          </label>
+          <div id="floorPlanDropzone" class="relative rounded-2xl border-2 border-dashed border-pichwaiGold/75 bg-parchment p-5 text-center hover:bg-pichwaiSage-mist/50 transition-colors cursor-pointer">
+            <input type="file" id="floorPlanInput" accept="image/*,.pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
+            <div id="uploadPlaceholder" class="space-y-1.5 pointer-events-none">
+              <div class="w-10 h-10 mx-auto rounded-full bg-pichwaiSage-mist text-pichwaiSage flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-pichwaiSage-dark">
+                Click or drag your floor plan image / PDF here
+              </p>
+              <p class="text-xs text-stone-500">
+                Supports PNG, JPG, WEBP, or PDF (Max 10 MB) • Compass North mark helpful
+              </p>
+            </div>
+
+            <!-- Floor Plan Preview Container -->
+            <div id="floorPlanPreviewBox" class="hidden items-center justify-between gap-4 text-left bg-parchment-card p-3 rounded-xl border border-pichwaiGold/50">
+              <div class="flex items-center gap-3 overflow-hidden">
+                <img id="floorPlanImgPreview" src="" alt="Floor plan preview" class="w-14 h-14 object-cover rounded-lg border border-pichwaiGold/50 hidden" />
+                <div id="floorPlanPdfBadge" class="w-14 h-14 rounded-lg bg-pichwaiSage text-pichwaiGold flex items-center justify-center font-cinzel font-bold text-xs hidden">
+                  PDF
+                </div>
+                <div class="truncate">
+                  <div id="floorPlanFileName" class="text-sm font-semibold text-pichwaiSage-dark truncate">floorplan.jpg</div>
+                  <div id="floorPlanFileSize" class="text-xs text-stone-500">Attached for Vastu grid mapping</div>
+                </div>
+              </div>
+              <button type="button" id="removeFloorPlanBtn" class="relative z-10 px-3 py-1.5 rounded-lg bg-rose-100 text-rose-800 text-xs font-semibold hover:bg-rose-200 transition-colors">
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 6: Specific Concerns / Notes -->
+        <div>
+          <label for="clientNotes" class="block text-xs font-cinzel font-bold uppercase tracking-wider text-pichwaiSage-dark mb-2">
+            Specific Concerns or Goals (Optional)
+          </label>
+          <textarea id="clientNotes" name="clientNotes" rows="3" placeholder="Share entrance facing direction, health/career goals, or specific zones you would like reviewed..."
+            class="w-full px-4 py-3 rounded-2xl bg-parchment border border-pichwaiGold/60 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pichwaiSage focus:border-pichwaiSage transition-all"></textarea>
+        </div>
+
+        <!-- Validation Message Box (Replaces any browser alert) -->
+        <div id="formErrorBanner" class="hidden p-4 rounded-2xl bg-rose-50 border border-rose-300 text-rose-800 text-sm font-medium">
+          Please complete your Name, Phone Number, Email, and Preferred Date before requesting your consultation.
+        </div>
+
+        <!-- Submit & Direct Email Enquiry CTAs -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pichwaiSage-dark via-pichwaiSage to-pichwaiSage-dark text-pichwaiGold-light font-cinzel font-bold text-sm sm:text-base tracking-wider border border-pichwaiGold shadow-gold-glow hover:brightness-110 transition-all">
+            Confirm Sacred Vastu Consultation
+          </button>
+          <button type="button" id="sendEmailEnquiryBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-parchment border-2 border-pichwaiGold text-pichwaiSage-dark font-cinzel font-bold text-sm sm:text-base tracking-wider hover:bg-pichwaiGold/20 transition-all">
+            <svg class="w-4 h-4 text-pichwaiSage shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+            <span>Send Enquiry via Email</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. TRADITIONAL PICHWAI-STYLED FOOTER                                  -->
+  <!-- ===================================================================== -->
+  <footer class="relative pichwai-canvas-bg text-parchment border-t-4 border-pichwaiGold overflow-hidden">
+    <!-- Top Sacred Lotus Pond Wave Border -->
+    <div class="w-full overflow-hidden leading-none bg-sacredIndigo-dark border-b border-pichwaiGold/35 py-3">
+      <div class="max-w-7xl mx-auto px-4 flex items-center justify-center gap-4 text-xs sm:text-sm font-cormorant italic text-pichwaiGold-pale tracking-widest">
+        <span>❀</span>
+        <span>Shree Nathji Sharanam Mama • Harmonizing Homes, Workplaces &amp; Sacred Lands</span>
+        <span>❀</span>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+        <!-- Brand Column -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-pichwaiSage-dark border border-pichwaiGold flex items-center justify-center">
+              <svg class="w-7 h-7" viewBox="0 0 64 64" fill="none">
+                <path d="M32 10C32 10 23 22 23 33C23 39.5 27 44 32 44C37 44 41 39.5 41 33C41 22 32 10 32 10Z" fill="#e88ca5" stroke="#e6c667" stroke-width="1.5"/>
+                <path d="M23 34C17 26 11 23 11 23C11 23 12 35 20 41C24 44 28 44 32 44" fill="#f3a9be" stroke="#e6c667" stroke-width="1.4"/>
+                <path d="M41 34C47 26 53 23 53 23C53 23 52 35 44 41C40 44 36 44 32 44" fill="#f3a9be" stroke="#e6c667" stroke-width="1.4"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-cinzel font-bold text-lg text-pichwaiGold tracking-wider">SHRINATHJI VASTU INSIGHT</div>
+              <div class="font-cormorant italic text-sm text-pichwaiGold-pale">Harmonizing Sacred Space</div>
+            </div>
+          </div>
+          <p class="text-parchment/85 text-sm leading-relaxed max-w-md">
+            Dedicated to restoring elemental harmony and tranquil prosperity through authentic Vedic Vastu Shastra, compassionate guidance, and non-demolition spatial remedies.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-cinzel font-bold text-sm uppercase tracking-widest text-pichwaiGold">Sacred Navigation</h4>
+          <ul class="space-y-2 text-sm text-parchment/90">
+            <li><a href="#philosophy" class="hover:text-pichwaiGold transition-colors">Philosophy &amp; Five Elements</a></li>
+            <li><a href="#services" class="hover:text-pichwaiGold transition-colors">Vastu Consultation Services</a></li>
+            <li><a href="#compass" class="hover:text-pichwaiGold transition-colors">8-Direction Vastu Compass</a></li>
+            <li><a href="#remedies" class="hover:text-pichwaiGold transition-colors">Non-Demolition Remedies</a></li>
+            <li><a href="#consultation" class="hover:text-pichwaiGold transition-colors">Book a Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="font-cinzel font-bold text-sm uppercase tracking-widest text-pichwaiGold">Connect With Us</h4>
+          <ul class="space-y-2.5 text-sm text-parchment/90">
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-pichwaiGold shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              <a href="https://maps.google.com/?q=Mukundgarh+Mandi,+Jhunjhunu,+Rajasthan+333705" target="_blank" rel="noopener noreferrer" class="hover:text-pichwaiGold underline decoration-pichwaiGold/50 underline-offset-4 transition-colors">
+                Shrinathji Vastu Insight, Mukundgarh Mandi, Jhunjhunu, Rajasthan – 333705
+              </a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-pichwaiGold">✦</span>
+              <a href="tel:+918829847589" class="hover:text-pichwaiGold underline decoration-pichwaiGold/50 underline-offset-4 transition-colors font-semibold">
+                +91 88298 47589 (Call &amp; WhatsApp)
+              </a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-pichwaiGold">✦</span>
+              <a href="https://wa.me/918829847589?text=Namaste%20Shrinathji%20Vastu%20Insight,%20I%20would%20like%20to%20inquire%20about%20Vastu%20guidance." target="_blank" rel="noopener noreferrer" class="hover:text-pichwaiGold transition-colors">
+                Chat directly on WhatsApp (8829847589)
+              </a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-pichwaiGold">✦</span>
+              <a href="mailto:kapilshrma091@gmail.com" class="hover:text-pichwaiGold underline decoration-pichwaiGold/50 underline-offset-4 transition-colors">
+                kapilshrma091@gmail.com
+              </a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-pichwaiGold">✦</span>
+              <span>Mon – Sat: 9:30 AM – 7:30 PM IST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Lotus Motif -->
+      <div class="mt-10 pt-6 border-t border-pichwaiGold/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-parchment/75">
+        <p>© 2026 Shrinathji Vastu Insight. All Rights Reserved.</p>
+        <p class="font-cormorant italic text-sm text-pichwaiGold-pale">
+          Crafted with reverence for Nathdwara Pichwai Art &amp; Vedic Sthapatya Veda
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- FLOATING WHATSAPP & CALL QUICK-ACTION WIDGET (BOTTOM-RIGHT)           -->
+  <!-- ===================================================================== -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5">
+    <!-- Direct Call Pill -->
+    <a href="tel:+918829847589" class="group flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-pichwaiSage-dark/95 text-pichwaiGold-pale border-2 border-pichwaiGold shadow-gold-glow hover:bg-pichwaiSage hover:scale-105 transition-all" aria-label="Call +91 88298 47589">
+      <span class="w-7 h-7 rounded-full bg-pichwaiGold text-pichwaiSage-dark flex items-center justify-center shadow-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </svg>
+      </span>
+      <span class="font-cinzel font-bold text-xs tracking-wider text-pichwaiGold-light">
+        +91 88298 47589
+      </span>
+    </a>
+
+    <!-- WhatsApp Quick-Connect Pill -->
+    <a href="https://wa.me/918829847589?text=Namaste%20Shrinathji%20Vastu%20Insight,%20I%20would%20like%20to%20inquire%20about%20a%20Vastu%20consultation." target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-pichwaiSage-dark to-emerald-800 text-parchment border-2 border-pichwaiGold shadow-gold-glow hover:brightness-110 hover:scale-105 transition-all" aria-label="Chat on WhatsApp +91 88298 47589">
+      <span class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-sm">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+        </svg>
+      </span>
+      <span class="font-semibold text-xs tracking-wide text-pichwaiGold-pale">
+        WhatsApp Us
+      </span>
+    </a>
+  </div>
+      </div>
+
+      <!-- Bottom Copyright & Lotus Motif -->
+      <div class="mt-10 pt-6 border-t border-pichwaiGold/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-parchment/75">
+        <p>© 2026 Shrinathji Vastu Insight. All Rights Reserved.</p>
+        <p class="font-cormorant italic text-sm text-pichwaiGold-pale">
+          Crafted with reverence for Nathdwara Pichwai Art &amp; Vedic Sthapatya Veda
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- INSTANT BOOKING CONFIRMATION MODAL                                    -->
+  <!-- ===================================================================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-pichwaiSage-dark/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="relative w-full max-w-lg rounded-3xl bg-parchment-card border-2 border-pichwaiGold p-7 sm:p-9 shadow-2xl text-center">
+      <!-- Top Lotus Emblem -->
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pichwaiSage border-2 border-pichwaiGold flex items-center justify-center shadow-md">
+        <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none">
+          <path d="M32 10C32 10 23 22 23 33C23 39.5 27 44 32 44C37 44 41 39.5 41 33C41 22 32 10 32 10Z" fill="#e88ca5" stroke="#f9e69e" stroke-width="1.5"/>
+          <path d="M23 34C17 26 11 23 11 23C11 23 12 35 20 41C24 44 28 44 32 44" fill="#f3a9be" stroke="#f9e69e" stroke-width="1.4"/>
+          <path d="M41 34C47 26 53 23 53 23C53 23 52 35 44 41C40 44 36 44 32 44" fill="#f3a9be" stroke="#f9e69e" stroke-width="1.4"/>
+        </svg>
+      </div>
+
+      <span class="font-cormorant italic text-lg text-pichwaiSage font-semibold">Shree Nathji Krupa</span>
+      <h3 id="modalTitle" class="font-cinzel font-bold text-2xl text-pichwaiSage-dark mt-1">
+        Consultation Request Received
+      </h3>
+      <p class="mt-2 text-stone-600 text-sm leading-relaxed">
+        Thank you, <strong id="modalClientName" class="text-pichwaiSage-dark">Guest</strong>. Your sacred Vastu alignment request has been registered with Reference ID <strong id="modalRefId" class="text-pichwaiGold-dark">#SVI-108</strong>.
+      </p>
+
+      <!-- Summary Box -->
+      <div class="mt-5 p-4 rounded-2xl bg-parchment border border-pichwaiGold/45 text-left text-xs sm:text-sm space-y-2 text-stone-700">
+        <div class="flex justify-between gap-2">
+          <span class="text-stone-500">Service Type:</span>
+          <span id="modalService" class="font-semibold text-pichwaiSage-dark text-right">Residential Vastu</span>
+        </div>
+        <div class="flex justify-between gap-2">
+          <span class="text-stone-500">Preferred Slot:</span>
+          <span id="modalDateTime" class="font-semibold text-pichwaiSage-dark text-right">Upcoming Date</span>
+        </div>
+        <div class="flex justify-between gap-2">
+          <span class="text-stone-500">Mode:</span>
+          <span id="modalMode" class="font-semibold text-pichwaiSage-dark text-right">Online Video Audit</span>
+        </div>
+        <div class="flex justify-between gap-2">
+          <span class="text-stone-500">Floor Plan:</span>
+          <span id="modalFileStatus" class="font-semibold text-pichwaiSage-dark text-right">Not attached</span>
+        </div>
+      </div>
+
+      <div class="mt-7">
+        <button type="button" id="closeModalBtn" class="w-full py-3.5 rounded-full bg-pichwaiSage text-pichwaiGold-light font-cinzel font-bold text-sm tracking-wider hover:bg-pichwaiSage-dark transition-colors">
+          Return to Sacred Space
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: INTERACTIVE MANDALA, SERVICES, FLOOR PLAN & BOOKING       -->
+  <!-- ===================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Navigation Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIconOpen = document.getElementById('menuIconOpen');
+      const menuIconClose = document.getElementById('menuIconClose');
+
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', !isHidden);
+        menuIconOpen.classList.toggle('hidden', isHidden);
+        menuIconClose.classList.toggle('hidden', !isHidden);
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+        });
+      });
+
+      // 2. 8-Direction Vastu Purusha Mandala Data & Interactive Controller
+      const directionData = {
+        N: {
+          tag: 'Uttara Disha • Zone of Opportunities',
+          title: 'North (Uttara)',
+          element: 'Water (Jal)',
+          deity: 'Lord Kubera (Custodian of Wealth)',
+          colors: 'Emerald Sage Green, Soft Blue, Ivory',
+          rooms: 'Main entrance, living room, home office, safe/treasury locker opening North, and indoor water fountains.',
+          remedy: 'Keep the North light, unobstructed, and well-lit. Placing a lush money plant or a serene Pichwai lotus pond artwork in the North stimulates career opportunities and steady cash flow.'
+        },
+        NE: {
+          tag: 'Ishanya Kona • Sacred Sanctum',
+          title: 'North-East (Ishanya)',
+          element: 'Water (Jal) & Space',
+          deity: 'Lord Ishana (Shiva) & Brihaspati',
+          colors: 'Soft Ivory, Pale Gold, Light Aqua',
+          rooms: 'Shrinathji Haveli / Puja Mandir, meditation corner, study room, living area, or underground clean water reservoir.',
+          remedy: 'Keep this corner spotless, airy, and elevated with natural morning light. Place a copper or brass vessel with fresh water and floating lotus petals; avoid heavy storage, clutter, or fiery red hues here.'
+        },
+        E: {
+          tag: 'Purva Disha • Solar Vitality & Grace',
+          title: 'East (Purva)',
+          element: 'Air (Vayu) & Solar Prana',
+          deity: 'Lord Indra & Surya Dev (The Sun)',
+          colors: 'Fresh Leaf Green, Warm Gold, Off-White',
+          rooms: 'Main entrance, morning veranda, sunlit living room, dining space, or children’s study area.',
+          remedy: 'Allow unobstructed morning sunlight to enter through East windows. Hanging a brass Sun emblem or displaying lush botanical art invites social recognition, vitality, and optimism.'
+        },
+        SE: {
+          tag: 'Agneya Kona • Hearth & Transformation',
+          title: 'South-East (Agneya)',
+          element: 'Fire (Agni)',
+          deity: 'Agni Dev & Goddess Lakshmi',
+          colors: 'Lotus Pink, Warm Terracotta, Peach, Coral',
+          rooms: 'Kitchen (cooking platform facing East), electrical mains/inverters, lamps, and wellness/fitness spaces.',
+          remedy: 'Balance the Fire element by keeping water sinks and stoves separated. If a kitchen cannot be placed in the South-East, incorporate lotus pink, warm terracotta accents, or a Himalayan salt lamp.'
+        },
+        S: {
+          tag: 'Dakshina Disha • Discipline & Fame',
+          title: 'South (Dakshina)',
+          element: 'Earth & Fire',
+          deity: 'Lord Yama (Dharmaraja)',
+          colors: 'Warm Beige, Terracotta, Soft Coral',
+          rooms: 'Bedrooms, storage cabinets, heavy wardrobes, and thick southern boundary walls.',
+          remedy: 'Keep the South slightly heavier and more enclosed than the North. Avoid large water features or mirrors on the South wall; ground the space with warm earthy tones and solid wooden furniture.'
+        },
+        SW: {
+          tag: 'Nairutya Kona • Pillar of Stability',
+          title: 'South-West (Nairutya)',
+          element: 'Earth (Prithvi)',
+          deity: 'Nirrti & Pitru (Ancestral Blessings)',
+          colors: 'Ochre Gold, Sandalwood, Earthy Beige',
+          rooms: 'Master bedroom for head of family, ancestral portraits, heavy safe/documents, and solid structural walls.',
+          remedy: 'Anchor the South-West with Earth energy—use ochre, beige, or golden tones, keep windows modest, and place Kamadhenu or mountain imagery here to strengthen family stability and leadership.'
+        },
+        W: {
+          tag: 'Paschima Disha • Gains & Fulfillment',
+          title: 'West (Paschima)',
+          element: 'Space (Akasha) & Earth',
+          deity: 'Lord Varuna (Lord of Cosmic Waters)',
+          colors: 'Ivory, Silver-Grey, Soft Gold, Royal Blue',
+          rooms: 'Dining room, children’s bedroom, study, or overhead water storage tank.',
+          remedy: 'Ensure the West wall is solid and clutter-free. Soft metallic gold or brass accents and family dining spaces in the West foster fulfillment, fulfillment of wishes, and harmonious gatherings.'
+        },
+        NW: {
+          tag: 'Vayavya Kona • Movement & Support',
+          title: 'North-West (Vayavya)',
+          element: 'Air (Vayu)',
+          deity: 'Vayu Dev & Chandra (The Moon)',
+          colors: 'Cream, Soft Sage, Pearl White',
+          rooms: 'Guest bedroom, daughters’ room, finished goods storage, garage, or airy balcony.',
+          remedy: 'Promote gentle air circulation and uncluttered pathways in the North-West. Crisp white, pearl, and sage green tones nurture helpful networks, smooth travel, and emotional harmony.'
+        }
+      };
+
+      const mandalaNodes = document.querySelectorAll('.mandala-node');
+      const dirPills = document.querySelectorAll('.dir-pill');
+
+      const dirSanskritTag = document.getElementById('dirSanskritTag');
+      const dirTitle = document.getElementById('dirTitle');
+      const dirElement = document.getElementById('dirElement');
+      const dirDeity = document.getElementById('dirDeity');
+      const dirColors = document.getElementById('dirColors');
+      const dirIdealRooms = document.getElementById('dirIdealRooms');
+      const dirRemedy = document.getElementById('dirRemedy');
+
+      function selectDirection(dirKey) {
+        const info = directionData[dirKey];
+        if (!info) return;
+
+        // Update SVG Mandala Node active state
+        mandalaNodes.forEach((node) => {
+          node.classList.toggle('active', node.getAttribute('data-dir') === dirKey);
+        });
+
+        // Update Pill Button active state
+        dirPills.forEach((pill) => {
+          const isActive = pill.getAttribute('data-dir') === dirKey;
+          pill.classList.toggle('bg-pichwaiSage', isActive);
+          pill.classList.toggle('text-pichwaiGold-light', isActive);
+          pill.classList.toggle('border-pichwaiGold', isActive);
+          pill.classList.toggle('shadow-sm', isActive);
+          pill.classList.toggle('bg-parchment-card', !isActive);
+          pill.classList.toggle('text-pichwaiSage-dark', !isActive);
+        });
+
+        // Populate Wisdom Panel
+        dirSanskritTag.textContent = info.tag;
+        dirTitle.textContent = info.title;
+        dirElement.textContent = info.element;
+        dirDeity.textContent = info.deity;
+        dirColors.textContent = info.colors;
+        dirIdealRooms.textContent = info.rooms;
+        dirRemedy.textContent = info.remedy;
+      }
+
+      mandalaNodes.forEach((node) => {
+        node.addEventListener('click', () => {
+          selectDirection(node.getAttribute('data-dir'));
+        });
+      });
+
+      dirPills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+          selectDirection(pill.getAttribute('data-dir'));
+        });
+      });
+
+      // 3. Service Cards "Inquire Now" -> Auto-select Property Type & Scroll to Form
+      document.querySelectorAll('.inquire-service-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const chosenService = btn.getAttribute('data-service');
+          const radios = document.querySelectorAll('input[name="propertyType"]');
+          radios.forEach((r) => {
+            if (r.value === chosenService) {
+              r.checked = true;
+            }
+          });
+          document.getElementById('consultation').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // 4. Floor Plan Upload & Live Preview Handler
+      const floorPlanInput = document.getElementById('floorPlanInput');
+      const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+      const floorPlanPreviewBox = document.getElementById('floorPlanPreviewBox');
+      const floorPlanImgPreview = document.getElementById('floorPlanImgPreview');
+      const floorPlanPdfBadge = document.getElementById('floorPlanPdfBadge');
+      const floorPlanFileName = document.getElementById('floorPlanFileName');
+      const floorPlanFileSize = document.getElementById('floorPlanFileSize');
+      const removeFloorPlanBtn = document.getElementById('removeFloorPlanBtn');
+
+      let attachedFileName = 'Not attached';
+
+      floorPlanInput.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        attachedFileName = file.name;
+        floorPlanFileName.textContent = file.name;
+        const sizeKB = Math.max(1, Math.round(file.size / 1024));
+        floorPlanFileSize.textContent = `${sizeKB} KB • Ready for Vastu grid mapping`;
+
+        uploadPlaceholder.classList.add('hidden');
+        floorPlanPreviewBox.classList.remove('hidden');
+        floorPlanPreviewBox.classList.add('flex');
+
+        if (file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = (ev) => {
+            floorPlanImgPreview.src = ev.target.result;
+            floorPlanImgPreview.classList.remove('hidden');
+            floorPlanPdfBadge.classList.add('hidden');
+          };
+          reader.readAsDataURL(file);
+        } else {
+          floorPlanImgPreview.classList.add('hidden');
+          floorPlanPdfBadge.classList.remove('hidden');
+        }
+      });
+
+      removeFloorPlanBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        floorPlanInput.value = '';
+        attachedFileName = 'Not attached';
+        floorPlanPreviewBox.classList.add('hidden');
+        floorPlanPreviewBox.classList.remove('flex');
+        uploadPlaceholder.classList.remove('hidden');
+      });
+
+      // Set default minimum date to today
+      const dateInput = document.getElementById('preferredDate');
+      const todayISO = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', todayISO);
+
+      // 5. Consultation Form Validation & Confirmation Modal
+      const consultationForm = document.getElementById('consultationForm');
+      const formErrorBanner = document.getElementById('formErrorBanner');
+      const bookingModal = document.getElementById('bookingModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const sendEmailEnquiryBtn = document.getElementById('sendEmailEnquiryBtn');
+
+      // Build a pre-filled mailto link to kapilshrma091@gmail.com using current form inputs
+      sendEmailEnquiryBtn.addEventListener('click', () => {
+        const nameVal = document.getElementById('clientName').value.trim() || 'Not specified';
+        const phoneVal = document.getElementById('clientPhone').value.trim() || 'Not specified';
+        const emailVal = document.getElementById('clientEmail').value.trim() || 'Not specified';
+        const modeVal = document.getElementById('clientCity').value;
+        const dateVal = document.getElementById('preferredDate').value || 'Not specified';
+        const timeVal = document.getElementById('preferredTime').value;
+        const notesVal = document.getElementById('clientNotes').value.trim() || 'None';
+        const selectedProperty = document.querySelector('input[name="propertyType"]:checked');
+        const propertyVal = selectedProperty ? selectedProperty.value : 'Residential Vastu';
+
+        const subject = encodeURIComponent(`Vastu Enquiry: ${propertyVal} - ${nameVal}`);
+        const bodyLines = [
+          'Namaste Shrinathji Vastu Insight,',
+          '',
+          'I would like to send a Vastu consultation enquiry with the following details:',
+          `• Full Name: ${nameVal}`,
+          `• Phone / WhatsApp: ${phoneVal}`,
+          `• Email: ${emailVal}`,
+          `• Service / Property Type: ${propertyVal}`,
+          `• City & Consultation Mode: ${modeVal}`,
+          `• Preferred Date: ${dateVal}`,
+          `• Preferred Time Window: ${timeVal}`,
+          `• Floor Plan Attached on Site: ${attachedFileName}`,
+          `• Specific Concerns / Notes: ${notesVal}`,
+          '',
+          'Office Reference: Mukundgarh Mandi, Jhunjhunu, Rajasthan – 333705'
+        ];
+        const body = encodeURIComponent(bodyLines.join('\n'));
+        window.location.href = `mailto:kapilshrma091@gmail.com?subject=${subject}&body=${body}`;
+      });
+
+      consultationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nameVal = document.getElementById('clientName').value.trim();
+        const phoneVal = document.getElementById('clientPhone').value.trim();
+        const emailVal = document.getElementById('clientEmail').value.trim();
+        const dateVal = document.getElementById('preferredDate').value;
+        const timeVal = document.getElementById('preferredTime').value;
+        const modeVal = document.getElementById('clientCity').value;
+        const selectedProperty = document.querySelector('input[name="propertyType"]:checked');
+        const propertyVal = selectedProperty ? selectedProperty.value : 'Residential Vastu';
+
+        if (!nameVal || !phoneVal || !emailVal || !dateVal) {
+          formErrorBanner.classList.remove('hidden');
+          formErrorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        formErrorBanner.classList.add('hidden');
+
+        // Populate Modal Details
+        const randomCode = Math.floor(100 + Math.random() * 899);
+        document.getElementById('modalClientName').textContent = nameVal;
+        document.getElementById('modalRefId').textContent = `#SVI-${randomCode}`;
+        document.getElementById('modalService').textContent = propertyVal;
+        document.getElementById('modalDateTime').textContent = `${dateVal} • ${timeVal}`;
+        document.getElementById('modalMode').textContent = modeVal;
+        document.getElementById('modalFileStatus').textContent = attachedFileName;
+
+        // Open Modal
+        bookingModal.classList.remove('hidden');
+        bookingModal.classList.add('flex');
+      });
+
+      closeModalBtn.addEventListener('click', () => {
+        bookingModal.classList.add('hidden');
+        bookingModal.classList.remove('flex');
+      });
+
+      bookingModal.addEventListener('click', (e) => {
+        if (e.target === bookingModal) {
+          bookingModal.classList.add('hidden');
+          bookingModal.classList.remove('flex');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
